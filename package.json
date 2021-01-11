@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/firebase": "^7.3.0",
     "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/vuetify": "^1.11.2",
     "child_process": "^1.0.2",
     "core-js": "^3.6.5",
     "firebase": "^8.2.1",
