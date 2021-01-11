@@ -70,14 +70,6 @@ export default {
       logOut: 'auth/logOut',
       isAdmin: 'auth/isAdmin',
     }),
-    async getBackgroundImage() {
-      await this.$axios
-        .$get(`/api/planetary/apod?api_key=${process.env.API_KEY}`)
-        .then((r) => {
-          this.image = r.url
-          this.background = r
-        })
-    },
     navigate(route) {
       if (this.isLoggedIn) {
         this.$router.push(route)
