@@ -62,9 +62,6 @@ export default {
       }
     })
   },
-  beforeMount() {
-    this.getBackgroundImage()
-  },
   methods: {
     ...mapActions({
       logOut: 'auth/logOut',
