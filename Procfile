@@ -1,3 +1,3 @@
 web: install
-web: nuxt build
+web: nuxt generate
 web: nuxt start
