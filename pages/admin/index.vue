@@ -64,8 +64,10 @@ export default {
     })
   },
   mounted() {
-    this.fetchPlanets()
-    this.fetchComments()
+    if (process.browser) {
+      this.fetchPlanets()
+      this.fetchComments()
+    }
   },
   methods: {
     ...mapActions({

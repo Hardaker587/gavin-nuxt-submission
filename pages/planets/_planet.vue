@@ -55,15 +55,17 @@ export default {
       planet: [],
     }
   },
-  beforeMount() {
-    this.getPlanet(this.id)
-    this.returnThisPlanet()
-    this.$nuxt.$on('add-comment', (obj) => {
-      this.addComment({ ...obj })
-    })
-    this.$nuxt.$on('fetch-comments', (mediaId) => {
-      this.fetchComment(mediaId)
-    })
+  mounted() {
+    if (process.browser) {
+      this.getPlanet(this.id)
+      this.returnThisPlanet()
+      this.$nuxt.$on('add-comment', (obj) => {
+        this.addComment({ ...obj })
+      })
+      this.$nuxt.$on('fetch-comments', (mediaId) => {
+        this.fetchComment(mediaId)
+      })
+    }
   },
   destroyed() {
     this.dumpPlanet()

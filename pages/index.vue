@@ -16,7 +16,9 @@ export default {
     }),
   },
   mounted() {
-    this.fetchPlanets()
+    if (process.browser) {
+      this.fetchPlanets()
+    }
   },
   methods: {
     ...mapActions({
