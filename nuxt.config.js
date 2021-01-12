@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'server',
-
+  ssr: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - gavin-nuxt-submission',
@@ -64,7 +64,7 @@ export default {
               onAuthStateChangedAction: 'auth/onAuthStateChanged',
               subscribeManually: false,
             },
-            ssr: true, // default
+            ssr: false, // default
           },
           database: true,
           firestore: true,
